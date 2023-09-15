@@ -38,29 +38,26 @@
 */
 #include <stdio.h>
 
-//se crea la función ImprimirA con dos parámetros de tipo entero, inicioA y finalA, para imprimir las letras A
-int ImprimirA( int inicioA, int finalA )
-{
-    for( ; inicioA <= finalA; inicioA++ ){
-        printf( "A" );
-    }
-}
-
-//se crea la función ImprimirEspacios con dos parámetros de tipo entero, inicioEspacios y finalEspacios, para imprimir los espacios al inicio de cada columna
-int ImprimirEspacios( int inicioEspacios, int finalEspacios )
-{
-    for( ; inicioEspacios <= finalEspacios; inicioEspacios++ ){
-        printf( " " );
-  }
-}//fin de la función ImprimirEspacios
-
 int main()
 {
-    //se declara la variable fila para el ciclo for, se inicializa en 1, se evalua si fila es menor o igual a 25 y se incrementa en 1, esta para cada fila del diseño
-    for( int fila=1; fila <= 25; fila++) {
-        ImprimirEspacios( 1, ( 80 - fila ) );
-        ImprimirA( 1, fila );
+    int cantidadDeLetras = 1, cantidadDeEspacios = 79;//se declaran las variables necesarias para el programa, cantidadDeLetras para la cantidad de letras A que se van a imprimir y cantidadDeEspacios para la cantidad de espacios que se van a imprimir al inicio de cada linea
+
+    //se crea el ciclo for para imprimir el diseño, se declaran las variables i, j y k, i para el numero de lineas, j para la cantidad de espacios al inicio de cada linea y k para la cantidad de letras A que se van a imprimir
+    for( int i = 1; i <= 25; i++ )
+    {
+        for( int j = 1; j <= cantidadDeEspacios; j++ )
+        {
+            printf( " " );
+        }
+
+        for( int k = 1; k <= cantidadDeLetras; k++ )
+        {
+            printf( "A" );
+        }
+
         printf( "\n" );
+        cantidadDeEspacios--;
+        cantidadDeLetras++;
     }//fin del for
 
     return 0;

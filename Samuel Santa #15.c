@@ -34,7 +34,8 @@ int Factorial( int numero )
 //se crea la función ValidarNumero con un parámetro de tipo entero, numero
 int ValidarNumero( int numero )
 {   //se verifica si el numero es entero positivo
-    for( ; numero < 0 ; ){
+    for( ; numero < 0 ; )
+    {
         printf( "El factorial de un número negativo no existe\nIngrese un numero entero positivo: " );
         scanf( "%i", &numero );//se le asigna a la variable numero el valor ingresado por el usuario
     }//fin del for

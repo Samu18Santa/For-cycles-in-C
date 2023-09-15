@@ -22,7 +22,7 @@
 #include <stdio.h>
 
 //se crea la función ImprimirA con dos parámetros de tipo entero, inicio y final
-int ImprimirA( int inicioA, int finalA )
+void ImprimirA( int inicioA, int finalA )
 {
     for( ; inicioA <= finalA; inicioA++ ){
         printf( "A" );
@@ -30,15 +30,15 @@ int ImprimirA( int inicioA, int finalA )
 }
 
 //se crea la función ImprimirLetras con dos parámetros de tipo entero, inicio y final para imprimir los espacios de cada columna
-int ImprimirEspacios( int inicioEspacios, int finalEspacios )
+void ImprimirEspacios( int inicioEspacios, int finalEspacios )
 {
     for( ; inicioEspacios <= finalEspacios; inicioEspacios++ ){
         printf( " " );
-  }
+    }
 }//fin de la función ImprimirEspacios
 
 //se crea la funcion salto de linea debido a la restriccion de solo 4 usos de la funcion printf
-int SaltoDeLinea()
+void SaltoDeLinea()
 {
     printf( "\n" );
 }//fin de la función SaltoDeLinea

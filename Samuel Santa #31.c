@@ -8,11 +8,9 @@
 - Universidad Tecnológica de Pereira
 - Programa de Ingeniería de Sistemas y Computación
 - Asignatura IS284 Programación II
-- El siguiente programa genera la suma de la serie de Taylor para cosh(x)
+- El siguiente programa genera la suma de la serie de Taylor para senh(x)
  Salvedad: El programa admite números enteros, para valores fuera de este rango no garantizamos su resultado
 */
-//Ejercicio 32
-
 #include <stdio.h>
 #include <math.h>
 
@@ -39,7 +37,7 @@ int main()
     float x = 0;//se crea la variable x de tipo flotante con un valor conocido
     int n = 0;//se crea la variable n de tipo entero con un valor conocido
 
-    printf( "Este programa genera la suma de la serie de Taylor para cosh(x)" );
+    printf( "Este programa genera la suma de la serie de Taylor para senh(x)" );
     printf( "\nIngrese el valor de x: " );
     scanf( "%f", &x );//se le asigna a la variable x el valor ingresado por el usuario
     
@@ -49,10 +47,10 @@ int main()
     float resultado = x;//se declara la variable resultado de tipo flotante con un valor de x, siendo este el primer termino de la serie de Taylor
 
     for( int i=1; i <= n; i++ ){
-        resultado += ( pow( x, ( 2 * i ) ) ) / Factorial( 2 * i );
-    }
+        resultado += ( pow( x, ( ( 2 * i ) + 1 ) ) ) / Factorial( ( ( 2 * i ) + 1 ) );
+    }//fin del for
     
-    printf( "El coseno hiperbolico de %g es igual a: %f", x, resultado );
+    printf( "El seno hiperbolico de %g es igual a: %f", x, resultado );
     
     return 0;
 }
