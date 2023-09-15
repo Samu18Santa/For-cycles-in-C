@@ -13,17 +13,16 @@
 */
 #include <stdio.h>
 
-//se crea la función Factorial con un parámetro de tipo lon long int, numero
 long long int Factorial( long long int numero )
 {    
-    long long int resultado = 1;//se declara la variable resultado de tipo long long int con un valor de 1, siendo este el factorial de 0
+    long long int resultado = 1;//se declara la variable resultado de tipo entero con un valor de 1, siendo este el factorial de 0
 
     if( numero == 0 ){
         return 1;
     }//de lo dontrario
     else{
         //se declara la variable n para el ciclo for, se inicializa en 0, se evalua si n es menor que numero y se incrementa en 1
-        for (int n = 0; n < numero; n++)
+        for (int n = 1; n <= numero; n++)
         {
             resultado *= n;
         }//fin del for
@@ -41,12 +40,12 @@ int main(){
     
     printf( "Los primeros %i términos de la serie Catalán son: ", cantidadDeTerminos );
     
+    long long int termino = 1;//se declara la variable termino de tipo long long int con un valor conocido con el primer termino de la serie
     //se declara la variable i para el ciclo for, se inicializa en 0, se evalua si i es menor que cantidadDeTerminos y se incrementa en 1
-    for( int i=0; i < cantidadDeTerminos; i++ ){
-        long long int termino = ( Factorial( ( i * 2 ) ) / ( ( Factorial( i ) * Factorial( ( i + 1 ) ) ) ) );
-        //se declara la variable termino de tipo long long int, se le asigna el valor del termino i-esimo de la serie de Catalan para ser impreso
-
+    for( int i=1; i <= cantidadDeTerminos; i++ )
+    {
         printf( "%lld, ", termino );//se imprime el valor de la variable termino.
+        termino = ( Factorial( ( i * 2 ) ) / ( ( Factorial( i ) * Factorial( ( i + 1 ) ) ) ) );//se le asigna a la variable termino el valor de la formula de la serie de Catalan        
     }//fin del for
 
     return 0;
