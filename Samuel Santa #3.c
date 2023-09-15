@@ -21,7 +21,7 @@ int main(){
   
     printf( "El siguiente programa presenta la serie de Lucas: L(n) = L(n-1) + L(n-2),\ndonde L(0) = 2 y L(1) = 1." );
     printf( "\nIngrese el número de términos que desea: " );
-    scanf( "%i", &cantidadDeTerminos );
+    scanf( "%i", &cantidadDeTerminos );//se le asigna a la variable cantidadDeTerminos el valor ingresado por el usuario
     
     printf( "Los primeros %i términos de la serie Lucas son: ", cantidadDeTerminos );
 

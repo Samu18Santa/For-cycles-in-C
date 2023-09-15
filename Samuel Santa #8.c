@@ -16,13 +16,15 @@
 //se crea la función Factorial con un parámetro de tipo lon long int, numero
 long long int Factorial( long long int numero )
 {    
-    long long int resultado = 1;
+    long long int resultado = 1;//se declara la variable resultado de tipo long long int con un valor de 1, siendo este el factorial de 0
 
     if( numero == 0 ){
         return 1;
     }//de lo dontrario
     else{
-        for (int n = 1; n <= numero; n++) {
+        //se declara la variable n para el ciclo for, se inicializa en 0, se evalua si n es menor que numero y se incrementa en 1
+        for (int n = 0; n < numero; n++)
+        {
             resultado *= n;
         }//fin del for
         return resultado;
