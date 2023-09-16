@@ -44,13 +44,13 @@ int main()
     printf( "Ingrese el número de términos: " );
     scanf( "%i", &n );//se le asigna a la variable n el valor ingresado por el usuario
 
-    float resultado = x;//se declara la variable resultado de tipo flotante con un valor de x, siendo este el primer termino de la serie de Taylor
+    float sen = x;//se declara la variable sen de tipo flotante con un valor de x, siendo este el primer termino de la serie de Taylor
 
     for( int i=1; i <= n; i++ ){
-        resultado += ( ( pow( (-1), i ) * pow( x, ( ( 2 * i ) + 1 ) ) ) / Factorial( ( ( 2 * i ) + 1 ) ) );
+        sen += ( ( pow( (-1), i ) * pow( x, ( ( 2 * i ) + 1 ) ) ) / Factorial( ( ( 2 * i ) + 1 ) ) );
     }
     
-    printf( "El sen de %g es igual a: %f", x, resultado );
+    printf( "El sen de %g es igual a: %f", x, sen );
     
     return 0;
 }

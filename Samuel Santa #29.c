@@ -37,20 +37,20 @@ int main()
     float x = 0;//se crea la variable x de tipo flotante con un valor conocido
     int n = 0;//se crea la variable n de tipo entero con un valor conocido
 
-    printf( "Este programa genera la suma de la serie de Taylor para para (e^x)" );
+    printf( "Este programa genera la suma de la serie de Taylor para (e^x)" );
     printf( "\nIngrese el valor de x: " );
     scanf( "%f", &x );//se le asigna a la variable x el valor ingresado por el usuario
     
     printf( "Ingrese el número de términos: " );
     scanf( "%i", &n );//se le asigna a la variable n el valor ingresado por el usuario
 
-    float resultado = x;//se declara la variable resultado de tipo flotante con un valor de x, siendo este el primer termino de la serie de Taylor
+    float e = x;//se declara la variable e de tipo flotante con un valor de x, siendo este el primer termino de la serie de Taylor
 
     for( int i=0; i <= n; i++ ){
-        resultado += ( pow( x, ( i + 1 ) ) ) / Factorial( i + 1 );
+        e += ( pow( x, ( i + 1 ) ) ) / Factorial( i + 1 );
     }
     
-    printf( "La serie de Taylor para e^%g es igual a: %f", x, resultado );
+    printf( "La serie de Taylor para e^%g es igual a: %f", x, e );
     
     return 0;
 }

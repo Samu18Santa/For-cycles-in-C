@@ -28,13 +28,13 @@ int main()
     printf( "Ingrese el número de términos: " );
     scanf( "%i", &n );//se le asigna a la variable n el valor ingresado por el usuario
 
-    float resultado = x-1;//se declara la variable resultado de tipo flotante con un valor de x-1, siendo este el primer termino de la serie de Taylor
+    float ln = x-1;//se declara la variable ln de tipo flotante con un valor de x-1, siendo este el primer termino de la serie de Taylor
 
     for( int i=2; i <= n; i++ ){
-        resultado += ( pow( -1, ( i + 1 ) ) * ( ( pow( ( x - 1 ), i ) ) / i ) );
+        ln += ( pow( -1, ( i + 1 ) ) * ( ( pow( ( x - 1 ), i ) ) / i ) );
     }
     
-    printf( "El coseno hiperbolico de %g es igual a: %f", x, resultado );
+    printf( "El Ln de %g es igual a: %f", x, ln );
     
     return 0;
 }

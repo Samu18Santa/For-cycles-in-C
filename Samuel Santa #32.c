@@ -46,13 +46,13 @@ int main()
     printf( "Ingrese el número de términos: " );
     scanf( "%i", &n );//se le asigna a la variable n el valor ingresado por el usuario
 
-    float resultado = x;//se declara la variable resultado de tipo flotante con un valor de x, siendo este el primer termino de la serie de Taylor
+    float cosh = x;//se declara la variable cosh de tipo flotante con un valor de x, siendo este el primer termino de la serie de Taylor
 
     for( int i=1; i <= n; i++ ){
-        resultado += ( pow( x, ( 2 * i ) ) ) / Factorial( 2 * i );
+        cosh += ( pow( x, ( 2 * i ) ) ) / Factorial( 2 * i );
     }
     
-    printf( "El coseno hiperbolico de %g es igual a: %f", x, resultado );
+    printf( "El cosh de %g es igual a: %f", x, cosh );
     
     return 0;
 }
