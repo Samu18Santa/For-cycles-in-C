@@ -1,5 +1,5 @@
-/*- Fecha de publicación: 2023-09-03
-- Hora: 4:00 p.m
+/*- Fecha de publicación: 2023-09-24
+- Hora: 2:00 p.m
 - Versión de su código: 1.0
 - Autor. Ing(c) Samuel Santa Martínez
 - Nombre del lenguaje utilizado: C
@@ -61,7 +61,7 @@ int main()
 
     int numero=0, numeroMayor=0, numeroMenor=__INT_MAX__, negativos=0, positivos=0, sumaPositivos=0, mayores150=0;//se declaran las variables numero, numeroMayor, numeroMenor, negativos, positivos, sumaPositivos y mayores150 de tipo entero
 
-    for( int i=0; i < 5; i++ )
+    for( int contador=0; contador < 5; contador++ )
     {
         printf( "Ingrese un número: " );
         scanf( "%i", &numero );

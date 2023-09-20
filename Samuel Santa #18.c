@@ -1,5 +1,5 @@
-/*- Fecha de publicación: 2023-09-03
-- Hora: 4:00 p.m
+/*- Fecha de publicación: 2023-09-24
+- Hora: 2:00 p.m
 - Versión de su código: 1.0
 - Autor. Ing(c) Samuel Santa Martínez
 - Nombre del lenguaje utilizado: C
@@ -28,9 +28,10 @@ int main()
 
     printf( "Ternas:\n");
 
-    for( int i = 1; i < 10; i++ )
+    //se declara la variable fila para el ciclo for, se inicializa en 1, se evalua si fila es menor a 10 y se incrementa en 1, esta para cada fila del diseño y para cambiar la secuencia cuando es necesario
+    for( int fila = 1; fila < 10; fila++ )
     {
-        if( i % 3 == 0 ){
+        if( fila % 3 == 0 ){
             printf( "%i %i %i\n", columna1, columna2, columna3 );
             columna1++;
             columna2++;

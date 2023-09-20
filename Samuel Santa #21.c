@@ -1,5 +1,5 @@
-/*- Fecha de publicación: 2023-09-03
-- Hora: 4:00 p.m
+/*- Fecha de publicación: 2023-09-24
+- Hora: 2:00 p.m
 - Versión de su código: 1.0
 - Autor. Ing(c) Samuel Santa Martínez
 - Nombre del lenguaje utilizado: C
@@ -20,23 +20,30 @@ PPPPPPPPPPPPP
 */
 #include <stdio.h>
 
+//se crea la función ImprimirLetra con dos parámetros de tipo entero, cantidadDeLetras para imprimir las letras del diseño,y ascii para realizar los cambios de la letra en cada linea
+void ImprimirLetras( int cantidadDeLetras, int ascii )
+{
+    for( ; 1 <= cantidadDeLetras; cantidadDeLetras-- ){
+        printf( "%c", ascii );
+    }
+}
+//se crea la función ImprimirLetras con un parámetro de tipo entero, cantidadDeEspacios para imprimir los espacios de cada columna
+void ImprimirEspacios( int cantidadDeEspacios )
+{
+    for( ; 1 <= cantidadDeEspacios; cantidadDeEspacios-- ){
+        printf( " " );
+    }
+}//fin de la función ImprimirEspacios
+
 int main()
 {
     int cantidadDeLetras = 13, cantidadDeEspacios = 0, ascii = 80;//se declaran las variables necesarias para el programa, cantidadDeLetras para la cantidad de letras que se van a imprimir, cantidadDeEspacios para la cantidad de espacios que se van a imprimir al inicio de cada linea y ascii para el codigo ASCII de la letra que se va a imprimir
 
-    //se crea el ciclo for para imprimir el diseño, se declaran las variables i, j y k, i para el numero de lineas, j para la cantidad de espacios al inicio de cada linea y k para la cantidad de letras que se van a imprimir
-    for( int i = 1; i <= 7; i++ )
-    {
-        for( int j = 1; j <= cantidadDeEspacios; j++ )
-        {
-            printf( " " );
-        }
-
-        for( int k = 1; k <= cantidadDeLetras; k++ )
-        {
-            printf( "%c", ascii );
-        }
-
+    //se declara la variable fila para el ciclo for, se inicializa en 1, se evalua si fila es menor o igual a 7 y se incrementa en 1, esta para cada fila del diseño
+     for( int fila = 1; fila <= 7; fila++ )
+     {
+        ImprimirEspacios( cantidadDeEspacios );
+        ImprimirLetras( cantidadDeLetras, ascii );
         printf( "\n" );
         cantidadDeEspacios++;
         cantidadDeLetras -= 2;

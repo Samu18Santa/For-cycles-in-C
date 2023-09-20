@@ -1,5 +1,5 @@
-/*- Fecha de publicación: 2023-09-03
-- Hora: 4:00 p.m
+/*- Fecha de publicación: 2023-09-24
+- Hora: 2:00 p.m
 - Versión de su código: 1.0
 - Autor. Ing(c) Samuel Santa Martínez
 - Nombre del lenguaje utilizado: C
@@ -21,18 +21,17 @@
 */
 #include <stdio.h>
 
-//se crea la función ImprimirA con dos parámetros de tipo entero, inicio y final
-void ImprimirA( int inicioA, int finalA )
+//se crea la función ImprimirLetra con un parámetro de tipo entero, cantidadDeLetras para imprimir las letras del diseño
+void ImprimirLetras( int cantidadDeLetras )
 {
-    for( ; inicioA <= finalA; inicioA++ ){
+    for( ; 1 <= cantidadDeLetras; cantidadDeLetras-- ){
         printf( "A" );
     }
 }
-
-//se crea la función ImprimirLetras con dos parámetros de tipo entero, inicio y final para imprimir los espacios de cada columna
-void ImprimirEspacios( int inicioEspacios, int finalEspacios )
+//se crea la función ImprimirLetras con un parámetro de tipo entero, cantidadDeEspacios para imprimir los espacios de cada columna
+void ImprimirEspacios( int cantidadDeEspacios )
 {
-    for( ; inicioEspacios <= finalEspacios; inicioEspacios++ ){
+    for( ; 1 <= cantidadDeEspacios; cantidadDeEspacios-- ){
         printf( " " );
     }
 }//fin de la función ImprimirEspacios
@@ -48,16 +47,16 @@ int  main()
     int fila=1, espaciosMedios=5;//se declaran las variables fila y espaciosMedios para el ciclo for, se inicializan en 1 y 5 respectivamente, se evalua si fila es menor o igual a 7 y se incrementa en 1, esta para cada fila del diseño
     //para las 3 primeras filas
     for( ; fila <= 3; fila++, espaciosMedios-=2 ){
-        ImprimirEspacios( 1, 27 );
-        ImprimirA( 1, fila );
-        ImprimirEspacios( 1, espaciosMedios );
-        ImprimirA( 1, fila );
+        ImprimirEspacios( 27 );
+        ImprimirLetras( fila );
+        ImprimirEspacios( espaciosMedios );
+        ImprimirLetras( fila );
         SaltoDeLinea();
     }//fin del for
 
     //cuando fila = 4
-    ImprimirEspacios( 1, 27 );
-    ImprimirA( 1, 7 );
+    ImprimirEspacios( 27 );
+    ImprimirLetras( 7 );
     SaltoDeLinea();
     fila++;
 
@@ -65,10 +64,10 @@ int  main()
     int cantidadA=3;//se declara la variable cantidadA para el ciclo for, se inicializa en 3, se evalua si fila es menor o igual a 6 y se incrementa en 1, esta para cada fila del diseño
     //para las 3 ultimas filas
     for( ; fila <= 7; fila++, cantidadA--, espaciosMedios+=2 ){
-        ImprimirEspacios( 1, 27 );
-        ImprimirA( 1, cantidadA );
-        ImprimirEspacios( 1, espaciosMedios );
-        ImprimirA( 1, cantidadA );
+        ImprimirEspacios( 27 );
+        ImprimirLetras( cantidadA );
+        ImprimirEspacios( espaciosMedios );
+        ImprimirLetras( cantidadA );
         SaltoDeLinea();
     }//fin del for
 

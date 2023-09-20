@@ -1,5 +1,5 @@
-/*- Fecha de publicación: 2023-09-03
-- Hora: 4:00 p.m
+/*- Fecha de publicación: 2023-09-24
+- Hora: 2:00 p.m
 - Versión de su código: 1.0
 - Autor. Ing(c) Samuel Santa Martínez
 - Nombre del lenguaje utilizado: C
@@ -38,26 +38,29 @@
 */
 #include <stdio.h>
 
+//se crea la función ImprimirLetra con un parámetro de tipo entero, cantidadDeLetras para imprimir las letras del diseño
+void ImprimirLetras( int cantidadDeLetras )
+{
+    for( ; 1 <= cantidadDeLetras; cantidadDeLetras-- ){
+        printf( "A" );
+    }
+}
+//se crea la función ImprimirLetras con un parámetro de tipo entero, cantidadDeEspacios para imprimir los espacios de cada columna
+void ImprimirEspacios( int cantidadDeEspacios )
+{
+    for( ; 1 <= cantidadDeEspacios; cantidadDeEspacios-- ){
+        printf( " " );
+    }
+}//fin de la función ImprimirEspacios
+
 int main()
 {
-    int cantidadDeLetras = 1, cantidadDeEspacios = 79;//se declaran las variables necesarias para el programa, cantidadDeLetras para la cantidad de letras A que se van a imprimir y cantidadDeEspacios para la cantidad de espacios que se van a imprimir al inicio de cada linea
-
-    //se crea el ciclo for para imprimir el diseño, se declaran las variables i, j y k, i para el numero de lineas, j para la cantidad de espacios al inicio de cada linea y k para la cantidad de letras A que se van a imprimir
-    for( int i = 1; i <= 25; i++ )
+    //se declara la variable fila para el ciclo for, se inicializa en 1, se evalua si fila es menor o igual a 25 y se incrementa en 1, esta para cada fila del diseño
+    for( int fila = 1; fila <= 25 ;fila++ )
     {
-        for( int j = 1; j <= cantidadDeEspacios; j++ )
-        {
-            printf( " " );
-        }
-
-        for( int k = 1; k <= cantidadDeLetras; k++ )
-        {
-            printf( "A" );
-        }
-
+        ImprimirEspacios( ( 79 - fila ) + 1 );
+        ImprimirLetras( fila );
         printf( "\n" );
-        cantidadDeEspacios--;
-        cantidadDeLetras++;
     }//fin del for
 
     return 0;
