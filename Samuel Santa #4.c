@@ -1,5 +1,5 @@
 /*- Fecha de publicación: 2023-09-24
-- Hora: 10:00 a.m
+- Hora: 2:00 p.m
 - Versión de su código: 1.0
 - Autor. Ing(c) Samuel Santa Martínez
 - Nombre del lenguaje utilizado: C
@@ -15,7 +15,7 @@
 
 int main()
 {
-    int primerValor=0, segundoValor=1, auxiliar=0, cantidadDeTerminos=0;//se declaran las variables necesarias para el programa, primerValor y segundoValor para los primeros valores de la serie,    y cantidadDeTerminos para almacenar el número de términos que desea el usuario.
+    int primerValor=0, segundoValor=1, auxiliar=0, cantidadDeTerminos=0;//se declaran las variables necesarias para el programa, primerValor y segundoValor para los primeros valores de la serie, auxilar para ayudarnos en la formula usada para hallar los valores de la serie y cantidadDeTerminos para almacenar el número de términos que desea el usuario.
     
     printf( "El siguiente programa presenta la serie de Pell: P(n) = 2P(n-1) + P(n-2),\ndonde P(0) = 0 y P(1) = 1." );
     printf( "\nIngrese el número de términos que desea: " );
