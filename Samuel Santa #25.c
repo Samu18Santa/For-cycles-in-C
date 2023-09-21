@@ -20,14 +20,14 @@
 */
 #include <stdio.h>
 
-//se crea la función ImprimirLetra con un parámetro de tipo entero, cantidadDeLetras para imprimir las letras del diseño
+//se crea la función ImprimirLetras con un parámetro de tipo entero, cantidadDeLetras para imprimir las letras del diseño
 void ImprimirLetras( int cantidadDeLetras )
 {
     for( ; 1 <= cantidadDeLetras; cantidadDeLetras-- ){
         printf( "Z" );
     }
 }
-//se crea la función ImprimirLetras con un parámetro de tipo entero, cantidadDeEspacios para imprimir los espacios de cada columna
+//se crea la función ImprimirEspacios con un parámetro de tipo entero, cantidadDeEspacios para imprimir los espacios de cada columna
 void ImprimirEspacios( int cantidadDeEspacios )
 {
     for( ; 1 <= cantidadDeEspacios; cantidadDeEspacios-- ){
@@ -43,26 +43,26 @@ void SaltoDeLinea()
 
 int main()
 {
-    int fila=1, cantidaDeEspacios=9, cantidadDeLetras=1;//se declaran las variables fila, cantidaDeEspacios y cantidadDeLetras, fila para las  filas en los ciclos for, cantidaDeEspacios para la cantidad de espacios que se van a imprimir al inicio de cada columna y cantidadDeLetras para la cantidad de letras Z que se van a imprimir en cada fila
+    int fila=1, cantidadDeEspacios=9, cantidadDeLetras=1;//se declaran las variables fila, cantidadDeEspacios y cantidadDeLetras, fila para las  filas en los ciclos for, cantidadDeEspacios para la cantidad de espacios que se van a imprimir al inicio de cada columna y cantidadDeLetras para la cantidad de letras Z que se van a imprimir en cada fila
 
     //en este ciclo for se evalua si fila es menor o igual a 4 y se incrementa en 1, este para las 4 primeras filas
     for( ; fila <= 4; fila++ ){
-        ImprimirEspacios( cantidaDeEspacios );
+        ImprimirEspacios( cantidadDeEspacios );
         ImprimirLetras( cantidadDeLetras );
         SaltoDeLinea();
-        cantidaDeEspacios--;
+        cantidadDeEspacios--;
         cantidadDeLetras += 2;
     }//fin del for
     
-    //se le das un valor de 7 a cantidaDeEspacios y de 5 a cantidadDeLetras, esto para las 3 ultimas filas
-    cantidaDeEspacios=7, cantidadDeLetras=5;
+    //se le das un valor de 7 a cantidadDeEspacios y de 5 a cantidadDeLetras, esto para las 3 ultimas filas
+    cantidadDeEspacios=7, cantidadDeLetras=5;
 
     //en este ciclo se evalua si fila es menor o igual a 7 y se incrementa en 1, fila comenzando en 5
     for( ; fila <= 7; fila++ ){
-        ImprimirEspacios( cantidaDeEspacios );
+        ImprimirEspacios( cantidadDeEspacios );
         ImprimirLetras( cantidadDeLetras );
         SaltoDeLinea();
-        cantidaDeEspacios++;
+        cantidadDeEspacios++;
         cantidadDeLetras -= 2;
     }//fin del for
 

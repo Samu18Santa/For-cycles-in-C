@@ -23,14 +23,14 @@ Z                 Z
 */
 #include <stdio.h>
 
-//se crea la función ImprimirLetra con un parámetro de tipo entero, cantidadDeLetras para imprimir las letras del diseño
+//se crea la función ImprimirLetras con un parámetro de tipo entero, cantidadDeLetras para imprimir las letras del diseño
 void ImprimirLetras( int cantidadDeLetras )
 {
     for( ; 1 <= cantidadDeLetras; cantidadDeLetras-- ){
         printf( "Z" );
     }
 }
-//se crea la función ImprimirLetras con un parámetro de tipo entero, cantidadDeEspacios para imprimir los espacios de cada columna
+//se crea la función ImprimirEspacios con un parámetro de tipo entero, cantidadDeEspacios para imprimir los espacios de cada columna
 void ImprimirEspacios( int cantidadDeEspacios )
 {
     for( ; 1 <= cantidadDeEspacios; cantidadDeEspacios-- ){

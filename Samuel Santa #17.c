@@ -34,12 +34,12 @@ int  main()
         //se evalua si contadorColumna2 es menor a 2, esta para imprimir el valor de columna2 2 veces
         if ( contadorColumna2 < 2 ){ 
             printf( "%i %i\n", columna1, columna2 );
-            columna1++;//se aumenta el valor de fila1 en 1
+            columna1++;//se aumenta el valor de columna1 en 1
             contadorColumna2++;//se aumenta el valor de contadorColumna2 en 1
         }//de lo contrario
         else{
             printf( "%i %i\n", columna1, columna2 );
-            columna1++;//se aumenta el valor de fila1 en 1
+            columna1++;//se aumenta el valor de columna1 en 1
             columna2++;//se aumenta el valor de columna2 en 1
             contadorColumna2--;//se disminuye el valor de contadorColumna2 en 1
         }//fin del if contadorColumna2 < 2

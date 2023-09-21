@@ -24,15 +24,14 @@
 */
 #include <stdio.h>
 
-//se crea la función ImprimirA con dos parámetros de tipo entero, inicio y final
-//se crea la función ImprimirLetra con un parámetro de tipo entero, cantidadDeLetras para imprimir las letras del diseño
+//se crea la función ImprimirLetras con un parámetro de tipo entero, cantidadDeLetras para imprimir las letras del diseño
 void ImprimirLetras( int cantidadDeLetras )
 {
     for( ; 1 <= cantidadDeLetras; cantidadDeLetras-- ){
         printf( "A" );
     }
 }
-//se crea la función ImprimirLetras con un parámetro de tipo entero, cantidadDeEspacios para imprimir los espacios de cada columna
+//se crea la función ImprimirEspacios con un parámetro de tipo entero, cantidadDeEspacios para imprimir los espacios de cada columna
 void ImprimirEspacios( int cantidadDeEspacios )
 {
     for( ; 1 <= cantidadDeEspacios; cantidadDeEspacios-- ){
@@ -50,22 +49,22 @@ int  main()
 {
     int fila = 1;//se declara la variable fila de tipo entero para las filas en los ciclos for y se inicializa en 1
 
-    //se declara el ciclo for para imprimir las primeras 6 filas, se inicia con la variable fila en 1, se evalua si fila es menor o igual a 6 y se incrementa en 1, esta para cada fila del diseño, ademas se declara la variable cantidaDeEspacios para la cantidad de espacios que se van a imprimir al inicio de cada fila
-    for( int cantidaDeEspacios=39; fila <= 6; fila++ )
+    //se crea el ciclo for para imprimir las primeras 6 filas, se inicia con la variable fila en 1, se evalua si fila es menor o igual a 6 y se incrementa en 1, esta para cada fila del diseño, ademas se declara la variable cantidadDeEspacios para la cantidad de espacios que se van a imprimir al inicio de cada fila
+    for( int cantidadDeEspacios=39; fila <= 6; fila++ )
     {
-        ImprimirEspacios( cantidaDeEspacios );
+        ImprimirEspacios( cantidadDeEspacios );
         ImprimirLetras( fila );
         SaltoDeLinea();
-        cantidaDeEspacios--;
+        cantidadDeEspacios--;
     }//fin del for
 
-    //se declara el ciclo for para imprimir las ultimas 5 filas, se inicia con la variable fila en 6, se evalua si fila es menor o igual a 1 y se incrementa en 1, esta para cada fila del diseño, ademas se declaran las variables cantidaDeEspacios y cantidaDeLetras para la cantidad de cantidaDeEspacios que se van a imprimir al inicio de cada fila y la cantidad de letras A que se van a imprimir en cada fila respectivamente
-    for ( int cantidaDeEspacios = 35, cantidaDeLetras = 5; fila <= 11; fila++ )
+    //se crea el ciclo for para imprimir las ultimas 5 filas, se inicia con la variable fila en 6, se evalua si fila es menor o igual a 1 y se incrementa en 1, esta para cada fila del diseño, ademas se declaran las variables cantidadDeEspacios y cantidaDeLetras para la cantidad de cantidadDeEspacios que se van a imprimir al inicio de cada fila y la cantidad de letras A que se van a imprimir en cada fila respectivamente
+    for ( int cantidadDeEspacios = 35, cantidaDeLetras = 5; fila <= 11; fila++ )
     {
-        ImprimirEspacios( cantidaDeEspacios );
+        ImprimirEspacios( cantidadDeEspacios );
         ImprimirLetras( cantidaDeLetras );
         SaltoDeLinea();
-        cantidaDeEspacios++;
+        cantidadDeEspacios++;
         cantidaDeLetras--;
     }//fin del for
 

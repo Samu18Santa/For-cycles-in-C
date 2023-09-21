@@ -15,7 +15,7 @@ se consigue un efecto de movimiento
 #include <stdio.h>
 #include <windows.h>
 
-//se crea la función ImprimirLetras con un parámetro de tipo entero, cantidadDeEspacios para imprimir los espacios de cada columna
+//se crea la función ImprimirEspacios con un parámetro de tipo entero, cantidadDeEspacios para imprimir los espacios de cada columna
 void ImprimirEspacios( int cantidadDeEspacios )
 {
     for( ; 1 <= cantidadDeEspacios; cantidadDeEspacios-- ){

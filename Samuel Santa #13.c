@@ -59,7 +59,8 @@ int main()
 {   
     printf( "Este programa lee desde el teclado un grupo de 75 números, diferentes a cero e imprime:\n* Cantidad de números Mayores a 150\n* Número mayor y número menor encontrado en el grupo\n* Cantidad de Números negativos encontrados\n* Promedio de los Positivos Encontrados.\n" );
 
-    int numero=0, numeroMayor=0, numeroMenor=__INT_MAX__, negativos=0, positivos=0, sumaPositivos=0, mayores150=0;//se declaran las variables numero, numeroMayor, numeroMenor, negativos, positivos, sumaPositivos y mayores150 de tipo entero
+    int numero=0, numeroMayor=0, numeroMenor=__INT_MAX__, negativos=0, positivos=0, sumaPositivos=0, mayores150=0;//se declaran las variables numero, numeroMayor, numeroMenor, negativos, positivos, sumaPositivos y mayores150 de tipo entero de tipo entero para clasificar los numeros ingresados
+
 
     for( int contador=0; contador < 5; contador++ )
     {

@@ -20,14 +20,14 @@ PPPPPPPPPPPPP
 */
 #include <stdio.h>
 
-//se crea la función ImprimirLetra con dos parámetros de tipo entero, cantidadDeLetras para imprimir las letras del diseño,y ascii para realizar los cambios de la letra en cada linea
+//se crea la función ImprimirLetras con dos parámetros de tipo entero, cantidadDeLetras para imprimir las letras del diseño,y ascii para realizar los cambios de la letra en cada linea
 void ImprimirLetras( int cantidadDeLetras, int ascii )
 {
     for( ; 1 <= cantidadDeLetras; cantidadDeLetras-- ){
         printf( "%c", ascii );
     }
 }
-//se crea la función ImprimirLetras con un parámetro de tipo entero, cantidadDeEspacios para imprimir los espacios de cada columna
+//se crea la función ImprimirEspacios con un parámetro de tipo entero, cantidadDeEspacios para imprimir los espacios de cada columna
 void ImprimirEspacios( int cantidadDeEspacios )
 {
     for( ; 1 <= cantidadDeEspacios; cantidadDeEspacios-- ){
