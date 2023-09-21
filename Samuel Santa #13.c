@@ -62,7 +62,7 @@ int main()
     int numero=0, numeroMayor=0, numeroMenor=__INT_MAX__, negativos=0, positivos=0, sumaPositivos=0, mayores150=0;//se declaran las variables numero, numeroMayor, numeroMenor, negativos, positivos, sumaPositivos y mayores150 de tipo entero de tipo entero para clasificar los numeros ingresados
 
 
-    for( int contador=0; contador < 5; contador++ )
+    for( int contador=0; contador < 15; contador++ )
     {
         printf( "Ingrese un número: " );
         scanf( "%i", &numero );
