@@ -13,6 +13,8 @@ N! = 1 x 2 x 3 x 4 x ... N
 N! = 1 si N = 0
 - Salvedad: El programa admite solo números enteros positivos, para valores fuera de este rango no garantizamos su resultado
 */
+#include <stdio.h>
+
 //se crea la función Factorial con un parámetro de tipo float, numero
 int Factorial( int numero )
 {    
@@ -50,7 +52,7 @@ int main()
 
     printf( "El siguiente programa lee un número entero positivo e imprime su factorial.\nIngrese por favor el numero: " );
     scanf( "%i", &numero );//se le asigna a la variable numero el valor ingresado por el usuario
-    numero= ValidarNumero( numero );//se llama a la función ValidarNumero para verificar si el numero es entero positivo
+    numero = ValidarNumero( numero );//se llama a la función ValidarNumero para verificar si el numero es entero positivo
   
     printf( "El factorial de %i es: %i", numero, Factorial( numero ) );//se imprime el factorial del numero ingresado por el usuario
   
